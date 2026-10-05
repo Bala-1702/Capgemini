@@ -1,0 +1,256 @@
+#include <stdio.h>
+#include<stdlib.h>
+struct node{
+    int data;
+    struct node * next;
+};
+void create(struct node** head,int data)
+{
+    struct node * newNode=(struct node*)malloc(sizeof(struct node));
+    newNode->data=data;
+    newNode->next=NULL;
+    if(*head==NULL)
+    {
+        *head=newNode;
+        return;
+    }
+    struct node * temp = *head;
+    while(temp->next!=NULL)
+    {
+        temp=temp->next;
+    }
+    temp->next=newNode;
+}
+void printList(struct node** head)
+{
+    struct node * temp = *head;
+    while(temp!=NULL)
+    {
+        printf("%d->",temp->data);
+        temp=temp->next;
+    }
+    printf("NULL");
+}
+int main()
+{
+    struct node* head=NULL;
+    create(&head,1);
+    create(&head,2);
+    create(&head,3);
+    create(&head,4);
+    create(&head,5);
+    printList(&head);
+    return 0;
+}
+-----------------------------------------------------------------------------------------------------------------------------
+#include <stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#define LENGTH 3
+int ** arr;
+char ** str;
+int main()
+{
+    void * gp;
+    arr=(int **)malloc(sizeof(int*)*LENGTH);
+    for(int i=0;i<LENGTH;i++){
+        *(arr+i)=(int*)malloc(sizeof(int)*LENGTH);
+    }
+    int sum=1;
+    for(int i=0;i<LENGTH;i++)
+    {
+        for(int j=0;j<LENGTH;j++){
+            *(*(arr+i)+j)=sum;
+            sum++;
+        }
+    }
+    gp=arr;
+    for(int i=0;i<LENGTH;i++){
+        for(int j=0;j<LENGTH;j++){
+            printf("%d ",*((*((int **)gp+i))+j));
+        } 
+        printf("\n");
+    }
+    str=(char **)malloc(sizeof(char *)*LENGTH);
+    for(int i=0;i<LENGTH;i++){
+        *(str+i)="Bala";
+    }    
+    gp=str;
+    for(int i=0;i<LENGTH;i++){
+        printf("%s ",*(((char **)gp)+i));
+    }
+
+    return 0;
+}
+
+------------------------------------------------------------------------------------------------------------------
+#include <stdio.h>
+
+int main()
+{
+    int a=10;
+    printf("Hello World");
+    int const b=20; // value cant be changed using variable but we can change by address
+    int * ptr =(int *)&b;
+    *ptr=50;
+    
+    int const *ptr1 =(int const*)&b; // value of the pointer pointing cannot be changed rather pointer value can be changed
+    //*ptr1=50;
+    ptr1=&a;
+    
+    int *const ptr2=(int *const)&b; // value of the pointer pointing can be changed , pointer value cannot be changed
+    //ptr2=&a;
+    *ptr2 = 20;
+    
+    int *const *ptr3=(int *const)&b; // both cannot be changed
+    return 0;
+}
+------------------------------------------------------------------------------------------------------------------------
+//Maze Problem
+#include <stdio.h>
+int dir1[4]={1,0,-1,0};
+int dir2[4]={0,1,0,-1};
+int visit[9][9];
+int solve(int i,int j,int mat[9][9],int row,int col,int visit[9][9])
+	{
+	    if(mat[i][j]==9)
+	        return  1;
+	    
+	    
+	    int result=0;
+	    visit[i][j]=1;
+	    for(int k=0;k<4;k++)
+	    {
+	        int x=i+dir1[k];
+	        int y=j+dir2[k];
+	        if(x>-1 && y>-1 && x<row && y<col && mat[x][y]!=0 && visit[x][y]==0)
+	        {
+	            result=result||solve(x,y,mat,row,col,visit);
+	        }
+	    }
+	    visit[i][j]=0;
+	    return result;
+	    
+	}
+
+int main()
+{
+    int row=9,col=9;
+	int array[9][9]={{1, 0, 1, 1, 1, 0, 0, 1},
+				{1, 0, 0, 0, 1, 1, 1, 1},
+				{1, 0, 0, 0, 0, 0, 0, 0},
+				{1, 0, 1, 0, 9, 0, 1, 1},
+				{1, 1, 1, 0, 1, 0, 0, 1},
+				{1, 0, 1, 0, 1, 1, 0, 1},
+				{1, 0, 0, 0, 0, 1, 0, 1},
+				{1, 1, 1, 1, 1, 1, 1, 1}};
+	if(solve(0,0,array,9,9,visit))
+        printf("True");
+    else
+        printf("False");
+    return 0;
+}
+
+
+
+
+
+
+
+/**
+ * Return an array of arrays of size *returnSize.
+ * The sizes of the arrays are returned as *returnColumnSizes array.
+ * Note: Both returned array and *columnSizes array must be malloced, assume caller calls free().
+ */
+int** findDifference(int* nums1, int nums1Size, int* nums2, int nums2Size, int* returnSize, int** returnColumnSizes) {
+    int occ[2001];
+    for(int i=0;i<nums1Size;i++)
+    {
+        occ[nums1[i]+1000]++;
+    }
+    for(int i=0;i<nums2Size;i++)
+    {
+        occ[nums2[i]+1000]++;
+    }
+    *returnSize=0;
+    returnColumnSizes=(int**)malloc(sizeof(int*)*2);
+    for(int i=0;i<2;i++)
+    {
+        *(returnColumnSizes+i)=(int*)malloc(sizeof(int)*1);
+    }
+    returnColumnSizes[0][0]=2;
+    returnColumnSizes[1][0]=10;
+    for(int i=0;i<2;i++)
+    {
+        for(int j=0;j<1;j++)
+            printf("%d ",returnColumnSizes[i][j]);
+    }
+    //for(int)
+    return NULL;
+}
+2215. Find the Difference of Two Arrays
+________________________________________________
+
+
+#include <stdio.h>
+#include<stdlib.h>
+typedef int (*PF) (int);
+typedef int** dp;
+typedef struct std{
+    int id;
+}st;
+int sq(int val)
+{
+    return val*val;
+}
+int main()
+{
+    PF fun;
+    fun=sq;
+    int res=fun(5);
+    int *a;
+    a=&res;
+    dp b=&a;
+    st* s=(st*)malloc(sizeof(st));
+    st s1={1};
+    s=&s1;
+    printf("%d\n",s1.id);
+    printf("%d\n",s->id);
+    printf("%d",**b);
+
+    return 0;
+}
+___________________________________________________________________________
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+typedef int(*My_Func) (int);
+
+int same(int a){
+    return a;
+}
+int square(int a){
+    return a*a;
+}
+int cube(int a){
+    return a*a*a;
+}
+int quad(int a){
+    return a*a*a*a;
+}
+My_Func arr[]={same,square,cube,quad};
+int main()
+{
+    char a[20];
+    char b[20];
+    printf("Enter number between 1-4\n");
+    fgets(a, sizeof(a), stdin); 
+    int input=atoi(a);
+    printf("Enter value\n");
+    fgets(b, sizeof(b), stdin); 
+    int val=atoi(b);
+    int result= arr[input-1] (val);
+    printf("%d",result);
+
+    return 0;
+}

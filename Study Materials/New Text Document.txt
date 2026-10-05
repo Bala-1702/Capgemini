@@ -1,0 +1,4 @@
+indexing,negative indexing,slicing,Sring delete,iterate over a string,string functions and reverse a string
+
+List
+create,indexing,slicing,nested list,changing values,adding values(append(add one element),extend(add more than one element))
