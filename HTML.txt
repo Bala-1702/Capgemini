@@ -1,0 +1,457 @@
+HTML(Hypertext markup language) defines the content and structure of the website.
+Well, HyperText refers to the pieces of text which can link to other documents in the website.
+Markup means marking the plain text to show the extra informations that describes the behavior of the content.It can achieve using tags and elements.
+Tag = just the markup keyword inside < >.
+Element = the tag(s) + content together.
+heading tag - 
+paragraph tag - 
+Void Elements:-
+	hr -
+	br -
+	img -
+Anchor elements -
+List elements - 
+	OL -
+	UL -
+Absolute Path -
+Relative Path -
+(..) is used to go up a level
+(.) is used to work on current directory
+Html boilerplate -
+Webpages - 
+Footer - 
+Content division element - div - container to group the elements.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+What is CSS?
+
+ C in CSS?
+Cascade - in cascade water falls from different level like top from level 3--> level 2--> level 1(which is ground pool).Like this css rules are get applied.
+If we think about how the rule gets applied, then the browser is going to look at the water level.
+
+Imagine if this rule gets applied first, and then as the water falls down the cascade, it sees another rule that's applying to the same element.Then you will see this style being applied.
+					Position
+					    |
+					    |
+					Specificity(Element->Class->Attribute selector->Id)
+					    |
+					    |
+					   Type(External->Internal->Inline)
+					    |
+					    |
+					Importance(!important)keyword
+
+CSS can be added in 3 types :-
+	inline - inside style attribute we have property and value to style the html component.
+	internal -
+	external - 
+CSS Selector :-
+	Element selector
+	Class selector(Any number of same class name can be used)
+	Id selector(Id should be unique)
+	Attribute selector(we can select based on attribute value also)	
+	Universal selector(*)
+if we want select specific element inside the div without assigning class name,so that we can combine div class name with element.So we can targe the specific element. 
+Combining CSS selectors :-
+	selector, selector{
+	}(to target both selector)
+	
+	Selector(parent)> Selector(child){
+	}(to target element that is in one level lower)
+	
+	Selector(Ancestor) Selector(Descendant){
+	}(to target element that may be any level lower)
+
+	SelectorSelector{
+	}(chanining - same elements different selector are chained to become a unique one)
+
+	Selector Chainingselector{
+	}
+
+Specificity Levels
+Selector        	Specificity
+
+Element (e.g. div)	 0-0-0-1
+Class (e.g. .d3)         0-0-1-0
+ID (e.g. #id)	         0-1-0-0
+Inline styles	         1-0-0-0
+
+
+CSS Positioning - 
+	Static 
+	Relative -
+	absolute - 
+	Fixed - 
+	Sticky - 	
+
+Class - 
+Font Size
+	px - 1/96th inch
+	pt - 1/72nd inch
+	1em - 100% of parent
+	1rem - 100% of root
+Font Weight
+Text Align - start , end , center , justify
+height -
+width - 
+border:thickness type color;
+border-width: 2parameter or 4 parameter.
+Padding - space between element and border.
+margin - part between border and any other content in the page.
+
+Float - if we use float means txt will be arranged surround the image.
+Responsive websites:-
+	Media queries - 
+	Flex - 
+	Grid - 
+	Bootstrap - 
+
+Flex Layout - align,justify and wrap.
+
+				Flex
+				 |
+   -------------------------------------------------------------
+   |								|
+Parent(container)					  Child(item)
+1.display						1.flex-basis
+2.flex-direction					2.order
+3.justify-content					3.flex-grow
+4.align-items						4.flex-shrink
+5.align-content						5.flex		
+6.flex-wrap
+7.flex-flow
+
+Flex sizing :-
+	flex-basis:
+	min-width:
+	max-width:
+	flex-shrink:
+	flex-grow:
+Grid :-
+ creating 2-dimensional layout.
+ We can create grid using:
+	*fixed size
+	*fractional size(responsive)
+	*auto size(in column adjust upto width ,in row adjust to height of the content
+	*minmax
+	*repeat(instead of repeating dimension we can use repeat)
+	*grid-auto-rows and grid-auto-columns
+
+Grid Container - 
+Grid Items - 
+Track - Row track Column track
+Grid cells -
+Grid Lines(Gap Property) -
+
+Grid Item Positioning can be done by :-
+	order - higher order move to last
+	grid-column-start and grid-column-end : used to arrange the cells in particular columns
+	grid-row-start and grid-row-end : used to arrange the cells in particular rows
+	grid-area : row s / col s / row e /col e
+
+
+---------------------------------------------------------------------------------------------------------------
+Bootstrap framework : 
+
+Advantage:
+	prebuild
+	tested in all browser(good browser compatibility)
+
+Disadvantage:
+	class bloat(excessive use of css class
+	it is difficult to customize
+	
+We can link bootstrap using CDN(Content Delivery Network)
+A CDN (Content Delivery Network) is a system of geographically distributed servers that work together to deliver digital content—like web pages, images, videos, and scripts—more quickly and efficiently to users based on their location.
+
+Here's how it works:
+When you access a website, instead of fetching all the content from a single central server (which might be far away), a CDN delivers it from a server that's physically closer to you.
+This is done through caching, where static content is stored on multiple edge servers around the world.
+
+Bootstrap Layouts
+	in a row it is divided into 12 columns.
+	we can modify it according to breakpoints(just like screen resolution)
+	if we use breakpoints with num of column, we can get appropriate column once it reaches that breakpoint, before that break point it will be using 100% column.
+ 
+
+Bootstrap Components:
+	Bootstrap is a popular open-source front-end framework used to design responsive and mobile-first websites quickly and efficiently. 
+🔹 Layout Components
+	Grid System: Responsive layout using rows and columns.
+	Containers: Fixed-width or full-width layout wrappers.
+	Utilities: Spacing, sizing, display, and more.
+
+🔹 UI Components
+	Alerts: Dismissible messages for feedback.
+	Badges: Small count or label indicators.
+	Breadcrumbs: Navigation hierarchy.
+	Buttons: Various styles, sizes, and states.
+	Cards: Flexible content containers with headers, footers, and images.
+	Dropdowns: Toggleable menus.
+	Forms: Inputs, selects, checkboxes, radios, and validation.
+	List Groups: Lists with contextual classes.
+	Modals: Popup dialogs.
+	Navs & Tabs: Navigation links, tabs, and pills.
+	Navbar: Responsive navigation header.
+	Pagination: Page navigation controls.
+	Progress Bars: Visual indicators of progress.
+	Spinners: Loading indicators.
+	Toasts: Lightweight notifications.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+Web Design:
+	Color Palette -
+		Red - Love,Energy,Intensity
+		Yellow - Joy,Intellect,Attention
+		Green - Freshness,Safety,Growth
+		Blue - Stability,Trush,Serenity
+		Purple - Royalty,Wealth,Feminity
+	Typography - 
+		serif
+		sans-serif - readable (used in body section)
+			* Gill sans
+		We can combine both family to make contrast fonts.
+	UI Design - 
+		hierarchy,layout,alignment,white space and audience.
+	UX Design - 
+		Simplicity,Consistency,Reading patterns,All platform design,Dont use dark patterns.
+	
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+JavaScript
+	Language that powers the webpage.
+	Script is nothing but a set of instruction to be executed.
+alert()
+typeof()
+variable - var 
+str.length
+str.slice(x,y)
+prompt()
+str.toUpperCase()
+Math.floor()
+Math.random() - (0 - 0.9999999999999999)
+
+Conditional statement :
+	if(){
+
+	}else{
+
+	}
+function funcName(){
+
+}
+
+function funcName(parameters){
+
+}
+
+function funcName(parameters){
+
+	return ;
+}
+
+Arrays
+	let arr = [1,2,3,4,5];
+
+While Loops : 
+function FizzBuzz(size){
+let count = 1;
+let arr=[];
+while(count <=size){
+    if(count%3===0 && count%5===0){
+        arr.push("FizzBuzz");
+    }else if(count%3===0){
+        arr.push("Fizz");
+    }
+    else if(count%5===0){
+        arr.push("Buzz");
+    }else{
+        arr.push(count);
+    }
+    count++;
+}
+console.log(arr);
+}
+
+Document Object Model (DOM) :
+	The entire HTML tree is contained inside an object called the document.
+	Objects inside the DOM can have properties(describe abt the object) and methods(things can do by the object).
+	In JavaScript it has Document class which contains entire HTML tree. Whereas browser creates a object namely "document" to access the methods and attributes in the Document Class.
+
+	document.querySelector()
+	document.querySelectorAll()
+	document.getElementById()
+	document.getElementsByClassName()
+	document.getElementsByTagName()
+	document.querySelector().getAttribute("attr");
+	document.querySelector().setAttribute("attr","value")
+	document.querySelector().addEventListener(eventType ,function name)
+
+Higher order functions:
+	 A higher-order function is indeed a function that either:
+	 Takes one or more functions as arguments, or Returns a function as its result, or both.
+example:
+(
+function applyFunction(f, value) {
+    return f(value);
+}
+
+function square(x) {
+    return x * x;
+}
+
+const result = applyFunction(square, 5);
+console.log(result); // Output: 25
+)
+
+
+EventListeners: 
+	 when an event like a click, keypress, or scroll occurs, you can attach a callback function to respond to that event. 
+ex)
+function addEventListeners(typeOfEvent,callback){
+	let eventHappend = {
+		type:keypress,
+	}
+	if(typeOfEvent ===  eventHappend.type){
+		callback(eventHappend);
+	}
+
+}
+
+
+
+
+JavaScript Objects:
+	A JavaScript object is a collection of key-value pairs, where each key (also called a property) is a string, and each value can be any data type — including numbers, strings, arrays, functions, or even other objects.
+
+let objectName = {
+    key1: value1,
+    key2: value2,
+    key3: function() {
+        // method (a function inside an object)
+    }
+};
+
+Constructor Function :
+	A constructor function in JavaScript is a special type of function used to create and initialize objects. It acts like a blueprint for creating multiple similar objects.
+
+function ConstructorName(param1, param2) {
+    this.property1 = param1;
+    this.property2 = param2;
+    this.method = function() {
+        // some behavior
+    };
+}
+
+Kernal And Shell :
+
+	The kernel is the central part of an operating system. It directly interacts with the hardware and manages system resources like CPU, memory, and devices.
+
+	The shell is a program that takes commands from the user and passes them to the kernel for execution. It acts as a command-line interface (CLI) or sometimes a graphical interface (GUI).
+
+ls – Lists all files and directories in the current directory.
+cd – Changes the current working directory.
+cd ~ – Navigates to the user's home directory.
+cd .. – Moves up one level to the parent directory.
+touch – Creates a new, empty file.
+mkdir – Creates a new directory (folder).
+rm – Deletes a specific file.
+rm * – Deletes all files in the current directory (excluding folders).
+rm -r – Recursively deletes a directory and all its contents.
+rm -ri – Recursively deletes files/directories with interactive confirmation before each deletion.
+	
+----------------------------------------------------------------------------------------------------------------------
+Backend Development:-
+In backend development, the backend is the part of a software application that handles the server-side logic, database interactions, and communication with the frontend. Here are the main components of a backend system:
+
+🔧 1. Server
+The machine or cloud service that runs your backend code.
+Handles requests from clients (like browsers or mobile apps).
+Examples: Apache, Nginx, Node.js server, Express.js.
+🧠 2. Application Logic (Backend Code)
+The core logic that processes requests, applies business rules, and returns responses.
+Written in languages like Python, Java, Node.js, Ruby, PHP, etc.
+🗃️ 3. Database
+Stores and retrieves data for the application.
+Types:
+Relational (e.g., MySQL, PostgreSQL)
+NoSQL (e.g., MongoDB, Redis)
+
+
+Node JS :
+	Node.js is a powerful, open-source JavaScript runtime environment that allows you to run JavaScript code outside of a web browser, typically on the server side.
+
+Key Features of Node.js:
+	Built on Chrome's V8 Engine: It uses the same engine that powers Google Chrome, making it fast and efficient.
+	Asynchronous and Non-blocking: Node.js handles multiple operations at once without waiting for one to finish before starting another—great for real-time applications.
+	Single-threaded but Scalable: Uses an event-driven model to handle many connections efficiently.
+	Cross-platform: Works on Windows, macOS, and Linux.
+
+Why Node JS?
+	JavaScript was originally designed to run only in web browsers, allowing developers to create interactive websites. However, with the introduction of Node.js, JavaScript can now run outside the browser, on the server side. Node.js provides a runtime environment that includes everything needed to execute JavaScript code on a server, such as file system access, networking capabilities, and more.
+
+Native Node Module
+NPM package manager
+Nodemon
+Express
+HTTP request
+Postman
+Middlewares
+Ejs
+
+
+
+
+API
+	base url
+	end point
+	query selector
+	path parameters
+
+JSON
+
+What makes an API RESTful?
+	Http
+	Client and server separation
+	URL based
+	Stateless(the current request should have all the details to fetch,it should not depend on past requests)
+	Return Xml or JSON format. 
+	
+React JS
+Sandbox
+JSX
+Babel
+
+
+Expressions return values.
+Statements perform actions.
+JS expressions in JSX
+Inline styling for react elements
+
+React Components :-
+
+React Properties :-
+
+Devtools :-
+
+Each sibling component or child of a parent components should have unique key.
+If we manually mention the components means there is no need of giving key it will consider in entered order. 
+If we are mapping the components means we have to mention key.
+So that it will help in a process called reconcillation.
+
+Mappig
+
+Map,Filter,Reduce
+
+Conditional Rendering - Ternary and &&
+
+Declarative Programming -
+	Declaring the program while writing itself to react on different states (different states variable condition).
+You describe what the UI should look like for a given state, and React takes care of updating the DOM when the state changes.
+
+Imperative Programming -
+You manually manipulate the DOM or control flow, often using refs or external libraries.
+
+Hooks -
+	useState()
+
+An input form element whose value is controlled by React in this way is called a “controlled component”.
