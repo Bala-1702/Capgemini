@@ -1,0 +1,295 @@
+Database is an organized collection of structured data.
+ 
+create table person (
+    id serial not null primary key,
+    first_name VARCHAR(50) not null,
+    last_name VARCHAR(50) not null,
+    gender VARCHAR(50) not null,
+    email VARCHAR(50),
+    dob DATE not null,
+    country VARCHAR(50) not null
+);
+insert into person (first_name, last_name, gender, email, dob, country) values ('Gilli', 'Tatnell', 'Female', 'gtatnell0@canalblog.com', '1964-07-26', 'Indonesia');
+ 
+ 
+select * from person order by id desc;
+ 
+select distinct country from person;
+ 
+\d person - describles person table
+ 
+\dt describes table
+ 
+select * from person where first_name = 'Jori' AND (country = 'China');
+ 
+select * from person limit 5;
+select * from person  fetch first 5 row only;
+select * from person  offset 5 limit 5;
+select * from person order by id desc  offset 5 limit 5;
+select * from person order by id desc  offset 5 fetch first 5 row only;
+
+
+select * from person where country in ('Brazil','Malta');
+it will display both countries; 
+ 
+select * from person where dob between '1970-01-20' and '1975-09-18';
+ 
+select * from person where email like '%.com';
+% for any  number of characters,
+_ is for single character,
+ALIKE - case insensitive
+ 
+select country,gender,count(*) from person group by country,gender having count(*) > 20 order by country asc limit 50;
+Any non-aggregated column in the SELECT list must also be included in the GROUP BY clause.
+Aggregate functions cannot be directly used within the GROUP BY or WHERE clauses.
+The GROUP BY clause must come after the FROM and WHERE clauses, but before the HAVING and ORDER BY clauses. 
+ 
+ 
+select make,model,min(price) from car group by make,model order by min desc limit 25;
+it will find minimum price for same make and model that have been grouped.
+min,count,avg,sum,max all works like above.
+ 
+select make,model,price,Round((price - (price * 0.1)),2) as discounted_price from car limit 25;
+ 
+select first_name,last_name,COALESCE(email,'email not provided') as email from person limit 50;
+COALESCE it will print default value if it presented, else it will print the alternate value provided inside the function.
+ 
+The SQL NULLIF function compares two expressions and returns NULL if they are equal; otherwise, it returns the first expression.
+ 
+SELECT
+
+    total_sales / NULLIF(num_orders, 0) AS avg_sale_per_order
+
+FROM
+
+    products;
+
+so that it can prevent division by zero error if num_orders = 0.
+ 
+select now()::date;
+now() gives current time stamp with date.
+::date is to typecast that to date.
+ 
+select now() - interval ' 5 days';
+we can give interval as anything days, week, month, year,mins, hour
+ 
+select first_name,last_name,COALESCE(email,'email not provided') as email,extract('year' from dob) as year from person limit 50;
+we can extract specific field in date using extract function.
+ 
+alter table person add constraint person_pkey primary key(id);
+alter table person add primary key(id);
+ 
+alter table person add constraint person_pkey unique(email);
+alter table person add unique(email);
+ 
+both are same.
+ 
+alter table person drop constraint constraint_name;
+ 
+alter table person add check(gender = 'Male' OR gender = 'Female');
+ 
+delete from person where id = 10;
+ 
+insert into person values(1001,'Bala','Santhosh','Male','balasanthosh17202@gmail.com','2002-02-17','India') on conflict(id) do nothing;
+it will not show any error if it is inserting values with same id, instead it will nothing.
+ 
+insert into person values(1001,'Bala','Santhosh','Male','balasanthosh17202@gmail.com','2002-02-17','India') on conflict(id) do update set email = excluded. email;
+it will not show any error if it is inserting values with same id, instead it will update the email alone.
+
+In SQL, a primary key uniquely identifies each row within a single table, while a foreign key is a column (or columns) in one table that references the primary key of another table, establishing a link.
+ 
+alter table person add foreign key(car_id) references car(id); -> we can foreign key constraint like this.
+ 
+alter table person add column car_id int references car(id) unique; -> we can add constaint while adding new column to table.
+ 
+If we remove one attribute from the primary key and it still to be act as a primary key(uniquely identifies row) then the previous key is not minimal. 
+ 
+If you can’t remove any attribute from the key without breaking uniqueness, then the key is minimal.
+ 
+ 
+Natural keys are unique identifiers from real-world data (like email or SSN) with business meaning, while surrogate keys are artificial, system-generated, meaningless values (like auto-increment IDs) used for stable identification.
+ 
+Candidate key - minimal set of columns that uniquely identifies each row.
+Super key - Set of columns that uniquely identifies each row, the set may be minimal or not minimal.
+Composite key - tow or more columns that uniquely identifies each row.
+ 
+Performing calculations on a group of data to return a single summary value is called an aggregate function (or aggregation).
+ 
+Using Case
+select make,model,price, 
+CASE 
+      when price>70000 then 'Luxury' 
+      when price between 50000 and 70000 then 'Premium' 
+      else 'Budget' 
+end as Category 
+from car limit 50;
+ 
+We can use case with sub query
+select * from 
+(select make,model,price, 
+CASE 
+      when price>70000 then 'Luxury' 
+      when price between 50000 and 70000 then 'Premium' 
+      else 'Budget' 
+end as Category 
+from car) t
+where category = 'Luxury'
+Limit 50;
+ 
+ 
+ 
+select
+
+length (customer_name) as name_length
+
+upper(city) as city_upper,
+
+Lower (customer_name) as cust lower,
+
+concat (customer_name,' ',city,' ', 'TN') as name c,
+
+SUBSTRING(customer name, 1, 5) AS name prefix,
+
+TRIM( chennai) AS trimmed_city,
+
+LPAD(customer_name, 15, '') AS left_padded_name,
+
+REPLACE(customer_name,'','') AS updated_name,
+
+INSTR(customer_name, 'a') AS position_of_a,
+
+right(customer_name, 5) AS first_S_chars,
+
+REVERSE (customer_name) AS reversed_name,
+
+FORMAT (9576543210, 2) AS formatted_number
+
+from CustomerDetails;
+ 
+A view in SQL is essentially a virtual table that is defined by a SQL query. Unlike a regular table, a view does not store data physically. 
+
+  Instead, it dynamically retrieves data from one or more underlying tables (or even other views) whenever you query it.
+ 
+create view Luxury as select * from
+  select make,model,price,
+       CASE
+             when price>70000 then 'Luxury'
+             when price between 50000 and 70000 then 'Premium'
+             else 'Budget'
+      end as Category
+  from car) t
+where category = 'Luxury' Limit 50;
+ 
+
+
+JOIN
+
+----
+
+select 
+
+r.name as restaurant_name,
+
+o.order_date 
+
+from Restaurants r
+
+join orders o on r.id = o.restaurant_id
+
+join customers c on c.cust_id = o.customer_id
+ 
+ 
+LEFT
+
+----
+
+select 
+
+r.name as restaurant_name,
+
+o.order_date 
+
+from Restaurants r
+
+left join orders o on r.id = o.restaurant_id
+ 
+ 
+RIGHT
+
+-----
+
+select 
+
+r.name as restaurant_name,
+
+o.order_date 
+
+from Restaurants r
+
+right join orders o on r.id = o.restaurant_id
+
+what is cloud computing? (pay as you go basis)
+On premise vs cloud infrastructure
+what is server and three types.
+What is vitualization.
+Three type of services.
+Cloud deployment models.
+What is AWS?
+What is EC2?(Instance Compute Service)
+Key Pair?
+Linux cmds(sudo -i ,  systemctl start serverName, systemctl status serverName)
+What is S3 (Simple Storage Service)? Serverless
+What is Bucket(path) , Object (Storing data)
+Bucket Versioning?
+Static Hosting.
+Object -> Storage class(Transition Rule)
+Frequent Access (standard)
+Infrequent Access
+Archieve (Compressed)
+Intelligent
+ 
+ 
+ 
+C244G208A10033
+ 
+A window function in sql performs calculation across set of rows related to current row without changing the number of rows.
+ 
+select id,make,model,price,sum(price) over (partition by model)
+ from car order by model limit 50;
+ 
+select id,make,model,price,rank() over (order by price desc) from car  limit 50;
+ 
+ntile(grouping number) over (order by something)
+ 
+select * , lag(salary) over (partition by id order by date)
+ 
+select id,name,first_value(salary) over (partition by id order by date) from employee;
+it will display first salary for each employee 
+ 
+Union will add two tables and remove duplicates if both table has almost similar structure.
+ 
+Union will add two tables without removing duplicates if both table has almost similar structure.
+ 
+create index idx on Car (id);
+ 
+Explain , Explain analyze
+ 
+Index increase the speed of data retrieval from table.
+ 
+bala1234 - posql pass
+ 
+Why normalisation?
+reduce data redundancy - avoid same data repeatedly.
+Easier maintenance - easy insert delete update
+ 
+1NF
+Atomicity - every column should hold only atomic values
+ 
+2NF
+Must be 1nf and all non key(not a primary key) should fully functional depend on primary key.
+No partial dependency
+ 
+3NF
+Must be 2nf and all columns are directly dependent on the primary key.
+No Transitive dependency (non key should not depend on non key)
+ 
