@@ -1,0 +1,152 @@
+Exit Orientation – FAQ
+ 
+When will my resignation get approved?
+Your resignation should be approved by your People manager within 15 days of the date of resignation. In case of any delay, it will be auto approved on the 15th day.
+ 
+Does employee have to follow with department SPOC?
+Most of the clearances will be auto cleared, employees need to follow up with People Manager for People Manager clearance post time helpdesk is clearedgrat Your asset clearance and ICRES will be cleared once you submit them and inform your asset SPOC for clearance. If the due is reflected in the ECMS, you need to clear the dues for the clearance.
+ 
+Where can an employee get the department SPOC details?
+The SPOC list is available on ECMS home page towards top right as contact
+List tab according to location wise. You may connect with the SPOCS concerned for pending clearances.
+ 
+Where & when to submit an ID card? Can we return the office chair which we have opted for?
+You can either submit the card to your nearby location in person at your base location and ensure it reaches on or before your LWD. However, you need to keep ICRES team informed on your submission if you are submitting other than Base Location. Clearance will be updated on your LWD if you have joined virtually.
+If you have opted office chair, there is no chair return policy. You need to pay the dues against the chair once it reflects in the ECMS.
+ 
+When is the Relieving & Experience letter provided?
+Relieving Cum Experience letter will be shared to your personal mail ID within 24hrs post final clearance completion. Final clearance is provided basis all the departmental clearance is completed without any due.
+ 
+ 
+ 
+Where to check the due amount in ECMS & what are the payment details?
+The due amount can be viewed in ECMS against each department in Exit request
+status page in dues amount section/column. It will be updated 3-5 days prior to your LWD. For any payment query, Post due payment share the screenshot to - centralexit.in@capgemini.com .
+ 
+Please find below bank details along with EMP ID
+Fund Transfer type : NEFT only
+Amount: Rs.XXXX/- against      recovery.
+Beneficiary Name: Capgemini Technology Services India Ltd.
+Bank Name : BNP Paribas
+IFSC : BNPA0009009
+Bank Address : BNP Paribas House, 1 North Avenue, Maker Maxity, Bandra Kurla Complex, Bandra East, Mumbai 400 051
+Bank Account Number : CAPGEMEXITEMPLOYEE ID NUMBER
+Account Type : Current account
+Note:
+Bank Account number is combination of “CAPGEMEXIT” fix words, without space, adding Employee Number.
+For Eg. If Natasha Shahane having her Employee ID 12345 then account number for transferring fund is CAPGEMEXIT12345
+Please note once you make payment before 6 PM of the day we shall be able to check and confirm the receipt of payment next day by EOD.
+And if you make payment after 6 PM of the day then we shall be able to check and confirm the receipt of payment after 2 days
+Please check –
+Ensure it is NEFT mode of transfer only
+Recheck the details entered
+EMP ID should contain only CAPGEMEXIT(EMP ID only numbers without any space)
+Mismatch in IFSC code address shall not be an issue
+Kindly ignore the warning error while adding bank details
+Do not click for “Verify the beneficiary details” option >> Please proceed with the transfer
+Note - We share same details with all the emps and receive transactions on daily basis
+If the problem still exists >> Please retry in sometime or visit to the bank for physical NEFT transfer.
+Kindly ignore the system generated emails post Final Clearance if the refund is already completed from the employee end and validated by DL Central Exit.
+ 
+You can either clear the dues upfront for the clearance and letter will be triggered within 24 hrs from final clearance date or the letter will be on hold till the FNF is processed if you opt for the deduction in FNF and amount is not adjustable. Kindly share the required details with centralexit.in@capgemini.com team it you opt for deduction, If the amount is adjustable, team will check and adjust while providing final clearance. If not, letter will be on hold till FNF is processed and will be released subject to no recovery.
+ 
+Employee ID:
+Name:
+Designation:
+Last Working Day (LWD):
+Approximate CTC:
+Leave Balance:
+Total Finance Due:
+ 
+Kindly ignore the system generated emails post Final Clearance if the refund is already completed from the employee end and validated by DL Central Exit.
+ 
+ 
+Will I get my last month salary?
+For the employees whose LWD is before 5th of that month then previous month salary will be on hold and will be part of FNF. For employees whose LWD is after 5th then the previous month salary will be released.
+ 
+How many Leaves will get encashed in FNF?
+Maximum 30 leaves get encashed with your F&F and is calculated on TBC (Total base component) of your CTC.
+Leave Encashment Calculations = Wages * # of Leave Days / 365 Days in a Year Wages = BASIC + OAAR2
+Can we take Leaves during my Notice period, and will there be any changes in my LWD if i avail Leaves during notice period?
+There is no defined policy, however it is at the discretion of your reporting supervisor or manager to approve them in connection with the HR BP. Employee LWD will not be changed if leaves are taken during notice period.
+ 
+Should I raise the request manually for Asset submission?
+RITM number will be auto triggered to your official mail ID 3 days prior to your LWD [Including weekends]. If you do not receive any RITM, you can raise request manually. Please follow the path:
+https://sservicecentral.capgemini.com -> Order or Request -> PC Surrender
+Employee needs to submit your asset and ID/access at your base location from where you have received asset (example: Bangalore) or nearest DTA unit only if you are submitting other than your base location (other than Bangalore) on your LWD with the RITM. Courier Facility is not available; you can send the asset with your Family or Friends in case of Emergencies.
+ 
+ 
+ 
+Note:
+Please visit Capgemini office between 9:00 to 17:00 from Monday – Friday. Clearance will be provided within 24-48hrs post submission.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Where can I submit my Asset?
+You can either submit your Asset at your Base location from where it is allocated or at any closest DTA units if you are submitting other than base location. You can check with asset spocs (check in ECMS contact list) in case of asset related queries.
+ 
+Is People Manager Clearance dependant on any other clearance?
+Yes, your People manager will be able to update the clearance post the Time helpdesk clearance is updated in ECMS.
+You can ask your PM to try by following the below steps for pm clearance till LWD post time helpdesk is cleared.
+•            Connect to VPN
+•            Login to ECMS (https://ecms.fs.capgemini.com/ )
+•            Click on Due Clearance Process tab
+•            Search with Employee ID
+How can I get my Time helpdesk clearance?
+Ensure to fill your Time sheets in the Replicon tool until your LWD and get it approved by the concerned people manager. Once the Time sheets are approved until your LWD, your Time helpdesk clearance will be auto cleared on or before your LWD.
+ 
+When can I expect my FNF?
+Full and final settlement will be credited to your existing bank account within 30days from the date of final clearance date.             
+ 
+Whom do we need to reach out for Insurance query post Exit?
+For Insurance related queries, please do write to Insurance team, employeeinsurance.in@capgemini.com
+ 
+   16. Will Parental insurance be valid post exit?
+Yes. Parental insurance will be valid till its validity and the pending premium due needs to be paid by the employee before exit. Ecards will be provided, for any queries post exit, please reach out to:
+❑ Contact No: 040-68178580 / 96200 09413
+❑  Or write a mail to capgemini@mediassist.in
+ 
+ 
+17. When can I withdraw my resignation?
+    You can withdraw your resignation in the Exit Clearance Management System (ECMS) by submitting the resignation withdrawal request on or before your last working day. Please note that approvals from both your People Manager and HR Business Partner (HR BP) are required to successfully withdraw your resignation before 4 P.M. on your LWD. If not, the resignation continues.
+ 
+     18. Where to raise the request for any concern related to HR query?
+For active employée please refer below path to log a ticket for any concern or query related to HRServices: Connect to GetSETUP:https://performancemanager5.successfactors.eu/login?company=capgemitecP3 >> Ask HR(right side top corner of GetSETUP home page) >> Create Ticket
+19. How to download Payslips, Form 16 and FNF statement?
+Please Login to HGS Portal. Pay slip & Form 16, FNF statement only available on HGS portal for Exit Employee. Company code is CG. Global ID & GGID is same
+https://ess.hgsbs.com/login?company=CG
+1)  Global ID –
+2)  Password – (In case of Forgot password) – Blank this option (Go to Step3)
+3)  Go to the Forgot password option.
+4)  New page open fill your DOB – New password is generated and sent on your personal mail id in ECMS Records.
+If you have not received the forgotten password on your personal mail id and if the forgotten password is sent to your Capgemini mail id. So, it means your final approval is not completed in the system. So please wait for the final approval of the system. After final approval in the system your personal mail id will be updated, and you can login again.
+5)  Again, go to link https://ess.hgsbs.com/login?company=CG
+6)  Global ID –
+7)  Password – (please fill you receive forgot password)
+8)  New page (Change password) open
+9) Current password – is you receive (Forgot Password)
+10) Create new password & confirm password
+ 
+If you cannot access to the portal, please connect with - cgfnf@hgsbs.com
+ 
+Please note effective April 2021 we have moved to HGS vendor hence old form16 is not available on HGS portal and the same will be available from FY 2020 – 21 only. Prior to this, it won’t be available due to payroll vendor changes. Its employee responsibility to download the same at the time of relieving.
+ 
+20. What is the eligibility for Gratuity and when will it be credited?
+An employee who worked for 4 years and 240 days or more for India service period, will be eligible for gratuity. Gratuity will be processed within 30 days from your LWD and will be credited to your Salary account as a separate component, not part of your FNF.
+ 
+21.Who will be the point of contact if we need any support after Exit?
+For any support after exit do write to, offboardingservices.in@capgemini.com
+For ESOP query,active employee need to raise ticket ,DAILY >> Ask HR >> Raise a Ticket >> Create a Ticket >>Select Topic as " General Compensation/Reward Queries >> Select subtopic "ESOP"
+       Post exit please do write to,  esopindia.in@capgemini.com
+For Ex-Employment Verification please inform your new employer to drop a mail to verification.in@capgemini.com
+For all PF/Gratuity related query post exit, kindly connect with retiralshelpdesk.in@capgemini.com
+Drop a mail to exitorientation.in@capgemini.com  for PPT.
+For shift allowance related query, reach out toshiftallowancequery@capgemini.com
+For NPS Query, kindly connect with  npsqueries.in@capgemini.com
+Note: For any queries related to Exit formalities until your LWD, you may reach out to   exitorientation.in@capgemini.com
+ 
