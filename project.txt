@@ -1,0 +1,41 @@
+Automatic Attendance System USing Face Recognition
+In my project, I developed an automatic attendance system using face recognition technology. The system utilizes OpenCV to access the camera and process live video feeds. It captures and reads the video in real-time.
+For the face recognition aspect, I utilized a face recognition package to extract and identify facial encodings from the live video. These encodings are then matched against a database of stored images to verify and record attendance. This approach reduce manual effort and increase accuracy.And also it update the attendance along with time in excel.
+ 
+Anti-Drowning Wristband
+This anti-drowning wristband is designed to prevent drowning incidents by automatically inflating an airbag when the wearer falls into a water source. The wristband integrates several key components:
+BMP 180 Pressure Sensor: Detects changes in atmospheric pressure to identify when the wearer is submerged in water.
+Arduino: Acts as the central processing unit, interpreting data from the pressure sensor and triggering the airbag inflation.
+GPS Module: Provides real-time location tracking of the wearer, ensuring quick and accurate rescue operations.
+GSM Module: Sends emergency alerts with the wearer's location. 
+Airbag: Rapidly inflates to keep the wearer afloat until help arrives.
+ 
+In case there is a fire accident in a building and the rescuer can't get inside, we can use this device. Since it's a micro UAV, it can travel through small spaces. It will capture live video and estimate the occupancy inside the room. Using that information, firefighters can decide where to go first.
+F3 Evo Flight Controller: Provides stable and precise control of the UAV's flight dynamics.
+Micro Coreless Motor: Powers the UAV, ensuring responsive flight performance.
+FPV Camera: Captures real-time video footage for monitoring fire-prone areas.
+UVC (USB Video Device Class) OTG Receiver: Enables live video streaming to a ground station or mobile device for immediate analysis and response.
+To program the F3 Evo Flight Controller, you can follow these general steps:
+Install Cleanflight Configurator:
+Download and install the Cleanflight Configurator from the Chrome Web Store or the official Cleanflight website.
+Connect the Flight Controller:
+Use a micro USB cable to connect the F3 Evo Flight Controller to your computer.
+Install Drivers:
+Ensure you have the necessary drivers installed. For Windows, you may need to install the STM32 Virtual COM Port Driver.
+Flash Firmware:
+Open Cleanflight Configurator.
+Select the correct COM port.
+Go to the "Firmware Flasher" tab.
+Choose the appropriate firmware for your F3 Evo (e.g., Cleanflight or Betaflight).
+Click "Load Firmware [Online]" and then "Flash Firmware".
+Configure Settings:
+Once the firmware is flashed, go to the "Setup" tab.
+Calibrate the accelerometer.
+Configure the receiver settings (PPM, SBUS, DSM) based on your setup.
+Set up the flight modes and other preferences.
+Tune PID Settings:
+Adjust the PID (Proportional, Integral, Derivative) settings to fine-tune the flight characteristics.
+Save and Test:
+Save your configuration.
+Test the flight controller on your UAV to ensure everything is working correctly.
+ 
